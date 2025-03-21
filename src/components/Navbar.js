@@ -7,7 +7,7 @@ const Navbar = ({size,setShow}) => {
     <nav>
         <div className='nav_box'>
             <span className='my_shop' onClick={()=> setShow(true)}>
-                DxO Shop
+                Goodreads
             </span>
             <div className='cart' onClick={()=> setShow(false)}>
                 <span>
