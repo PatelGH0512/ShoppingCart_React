@@ -1,42 +1,74 @@
-*{
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-nav{
+nav {
     width: 100%;
-    background-color: green;
-    height: 60px;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    height: 64px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
-.nav_box{
-    width: 80%;
-    margin: auto;
+
+.nav_box {
+    width: 92%;
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    align-items: start;
-}
-.my_shop{
-    font-size: 1.5rem;
     align-items: center;
-    font-weight: bold;
+    height: 100%;
+}
+
+.my_shop {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #111827;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    letter-spacing: -0.5px;
+    transition: transform 0.2s ease;
+}
+
+.my_shop:hover {
+    transform: translateY(-1px);
+}
+
+.cart {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+}
+
+.cart:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.cart span:nth-child(1) {
+    font-size: 1.3rem;
+    color: #4f46e5;
+}
+
+.cart span:nth-child(2) {
+    font-size: 0.7rem;
+    padding: 2px 6px;
+    background-color: #4f46e5;
     color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    cursor: pointer;
-    margin: 10px;
+    border-radius: 12px;
+    margin-left: 4px;
+    font-weight: 600;
+    min-width: 18px;
+    text-align: center;
 }
-.cart{
-    cursor: pointer;
-    margin: 10px;
-}
-.cart span:nth-child(1){
-    font-size:  2rem;
-}
-.cart span:nth-child(2){
-    padding: 0 3px;
-    background-color: black;
-    font-weight: bold;
-    color: white;
-    position: relative;
-    top: -18px;
-    border-radius: 50%;
+
+@media (max-width: 768px) {
+    .nav_box {
+        width: 95%;
+    }
 }

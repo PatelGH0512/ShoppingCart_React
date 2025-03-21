@@ -33,16 +33,16 @@ const Cart = ({cart,setCart,handleChange}) => {
                         <p>{item.title}</p>
                     </div>
                     <div>
-                    <button onClick={() => {
+                    <button className='Addition'onClick={() => {
                       handleChange(item ,+1)
                     }}>+</button>
-                    <button onClick={() => {
+                    <button className='Subtraction'onClick={() => {
                       handleChange(item ,-1)
                     }}>-</button>
                     </div>
                     <div>
                       <span>{item.price}</span>
-                      <button onClick={() => handleRemove(item.id)}>Remove</button>
+                      <button className='remove_button'onClick={() => handleRemove(item.id)}>Remove</button>
                     </div>
                 </div>
             ))
